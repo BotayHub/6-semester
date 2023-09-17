@@ -1,0 +1,103 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[english,russian]{babel}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{mathtext} 				% русские буквы в фомулах
+\usepackage{amsmath,amsfonts,amssymb,amsthm,mathtools} % AMS
+\usepackage{icomma} % "Умная" запятая: $0,2$ --- число, $0, 2$ --- перечисление
+\usepackage{capt-of}
+\usepackage{appendix}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{floatrow}
+\usepackage[left=2cm,right=2cm,
+    top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\usepackage{multicol} % Несколько колонок
+\usepackage{gensymb}
+\title{Отчёт по лабораторной работе №28
+
+Усилитель на биполярных транзисторах}
+\author{Плюскова Н.А. Б04-004 }
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section*{1. Результаты эксперимента}
+\subsection*{1.1 Нестабилизированный усилитель}
+
+Соберем схему со следующими параметрами:
+\begin{itemize}
+    \item $R_{\text{К}}$ = 2 кОм
+    \item $C_{\text{Б}}$ = 0,33-0,39 мкФ
+\end{itemize}
+
+\begin{enumerate}
+\item В схеме, указанной на рисунке к п.1 методички (см. стр. 26), найдем $h_{21\text{э}}$. При этом для корректности следующих измерений подберем $R_{\text{Б}}$ так, чтобы $U_{\text{КЭ}}\approx$ 5 В:
+    \begin{itemize}
+        \item $R_{\text{Б}}$ = 521 кОм
+        \item $h_{21\text{э}}$ = 70
+    \end{itemize}
+
+   \item Для нестабилизированного усилителя с $R_{\text{И}} \approx R_{\text{К}}$ найдем $U_{\text{вых.макс}}, K_{u}, K_{e}, R_{\text{вх}}, f_{\text{н}}, f_{\text{в}}$:
+
+    При $R_{\text{Б}}$ = 521 кОм:
+    \begin{itemize}
+        \item $U_{\text{вых.макс}}$ = 3,89 В
+        \item $K_{u}$ = 129
+        \item $K_{e}$ = 71
+        \item $R_{\text{вх}}$ = 90 кОм
+        \item $f_{\text{н}}$ = 280 Гц
+        \item $f_{\text{в}}$ = 32 кГц
+    \end{itemize}
+
+    При $R_{\text{Б}}$ = 1001 кОм:
+    \begin{itemize}
+        \item $U_{\text{вых.макс}}$ = 1,85 В
+        \item $K_{u}$ = 84
+        \item $K_{e}$ = 52
+        \item $R_{\text{вх}}$ = 166 кОм
+        \item $f_{\text{н}}$ = 140 Гц
+        \item $f_{\text{в}}$ = 65 кГц
+    \end{itemize}
+
+
+    \item Определим $U_{\text{вых.макс}}, K_{u}, K_{e}, R_{\text{вх}}, f_{\text{н}}, f_{\text{в}}$ нестабилизированного усилителя с внешней нагрузкой $R_{\text{Н}} \approx R_{\text{К}}$ при $R_{\text{Б}}$ = 521 кОм и $C_{\text{р}}$ = 220 мкФ:
+    \begin{itemize}
+        \item $U_{\text{вых.макс}}$ = 1,65 В
+        \item $K_{u}$ = 79
+        \item $K_{e}$ = 40
+        \item $R_{\text{вх}}$ = 234 кОм
+        \item $f_{\text{н}}$ = 253 Гц
+        \item $f_{\text{в}}$ = 350 кГц
+    \end{itemize}
+    
+\end{enumerate}
+
+\subsection*{1.2 Стабилизированный усилитель}
+\begin{enumerate}
+    \item Подберем $R_{1}$ так, чтобы $I_{\text{К}}$ = 1,19 мА:
+    \begin{itemize}
+        \item $R_{\text{э}}$ = 0,4 кОм
+        \item $R_{2}$ = 2 кОм
+        \item $U_{\text{Б}}$ = 2,19 В
+        \item $U_{\text{Э}}$ = 1,5 В
+        \item $U_{\text{К}}$ = 5,2 В
+    \end{itemize}
+    \item Для стабилизированного усилителя с $C_{\text{Э}}$ = 220 мкФ измерить $U_{\text{вых.макс}}, K_{u}, K_{e}, R_{\text{вх}}, f_{\text{н}}, f_{\text{в}}$ при $R_{\text{И}} \approx R_{\text{К}}$:
+    \begin{itemize}
+        \item $U_{\text{вых.макс}}$ = 2,32 В
+        \item $K_{u}$ = 121
+        \item $K_{e}$ = 47
+        \item $R_{\text{вх}}$ = 1,3 кОм
+        \item $f_{\text{н}}$ = 430 Гц
+        \item $f_{\text{в}}$ = 270 кГц
+    \end{itemize}
+
+    
+\end{enumerate}
+
+\end{document}
